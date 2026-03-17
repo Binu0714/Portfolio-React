@@ -33,7 +33,7 @@ const NavBar = () => {
         src="/assets/menu/menu.png" 
         alt="Menu Icon" 
         onClick={() => setIsOpen(!isOpen)}
-        className="lg:hidden w-[30px] h-[30px] cursor-pointer" 
+        className="lg:hidden w-[30px] h-[30px] cursor-pointe " 
       />
 
       {/* 

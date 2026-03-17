@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <section 
       id="home" 
-      className="relative min-h-screen flex justify-center items-center px-6 py-20 scroll-mt-[80px] animate-fade"
+      className="relative min-h-screen flex justify-center items-center px-6 py-20 scroll-mt-[80px] animate-fade" 
     >
       {/* 
         Container max-w-4xl is good, but we allow it to grow on 2560px 

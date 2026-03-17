@@ -1,6 +1,6 @@
 const About = () => {
     return (
-        <section id="about" className="min-h-screen flex items-center justify-center py-10 px-4 relative overflow-hidden scroll-mt-[80px]">
+        <section id="about" className="min-h-screen flex items-center justify-center py-10 px-4 relative overflow-hidden scroll-mt-[80px]" data-aos="fade-up">
             <div className="container mx-auto max-w-5xl">
                 <h2 className="text-4xl font-bold mb-12 text-center">
                     About <span className="text-[#fb8500]">Me</span>

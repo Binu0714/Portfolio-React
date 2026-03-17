@@ -1,11 +1,22 @@
 import NavBar from './components/NavBar'
 import Home from './components/sections/Home'
 import About from './components/sections/About'
+import Skills from './components/sections/Skills';
 import NightSky from './components/NightSky'
 // import Projects from './components/sections/Projects'
 // import Contact from './components/sections/Contact'
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function App() {
+
+useEffect(() => {
+  AOS.init({
+        duration: 2000
+  });
+}, []);
+
   return (
     <div className="min-h-screen"> 
       <NightSky />
@@ -13,6 +24,7 @@ function App() {
       <main>
         <Home />
         <About />
+        <Skills />
       </main>
       
     </div>
