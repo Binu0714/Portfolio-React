@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme {
+  --font-edu: "Edu NSW ACT Cursive", cursive;
+  --font-saira: "Saira", sans-serif;
+}
 
 body {
   background-color: black;
@@ -9,4 +13,19 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+.animate-fade {
+  animation: fade 2s ease-in-out;
+}
+
+@keyframes fade {
+  from {
+      opacity: 0;
+      transform: translateY(-9.375rem);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }

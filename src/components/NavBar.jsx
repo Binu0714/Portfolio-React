@@ -35,7 +35,7 @@ const NavBar = () => {
             href={link.href}
             onClick={() => setActiveLink(link.href)}
             className={`
-              no-underline /* <--- ADD THIS HERE! */
+              no-underline
               relative text-[16px] font-medium ml-[3.125rem] transition-colors duration-300
               font-sans 
               
