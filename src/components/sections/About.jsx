@@ -47,17 +47,17 @@ const About = () => {
                             />
 
                             {/* Floating Cards - Hidden on mobile, appear on Tablet/Desktop (1024px+) */}
-                            <div className="absolute -left-2 sm:-left-10 top-6 sm:top-10 bg-black/60 backdrop-blur-md border border-white/10 p-2 sm:p-4 rounded-xl shadow-lg transition-all">
+                            <div className="absolute -left-2 sm:-left-10 top-6 sm:top-10 bg-black/60 backdrop-blur-md border border-[#fb8500]/30 p-2 sm:p-4 rounded-xl shadow-lg transition-all">
                                 <h4 className="text-[#fb8500] font-bold text-sm sm:text-lg whitespace-nowrap">Solving</h4>
                                 <p className="font-saira text-[10px] sm:text-sm text-gray-300 whitespace-nowrap">Real World Problems</p>
                             </div>
 
-                            <div className="absolute -right-2 sm:-right-8 bottom-16 sm:bottom-20 bg-black/60 backdrop-blur-md border border-white/10 p-2 sm:p-4 rounded-xl shadow-lg transition-all">
+                            <div className="absolute -right-2 sm:-right-8 bottom-16 sm:bottom-20 bg-black/60 backdrop-blur-md border border-[#fb8500]/30 p-2 sm:p-4 rounded-xl shadow-lg transition-all">
                                 <h4 className="text-[#fb8500] font-bold text-sm sm:text-lg whitespace-nowrap">Crafting</h4>
                                 <p className="font-saira text-[10px] sm:text-sm text-gray-300 whitespace-nowrap">Clean Codes</p>
                             </div>
 
-                            <div className="absolute -bottom-4 sm:-bottom-6 left-4 sm:left-8 bg-black/60 backdrop-blur-md border border-[#fb8500]/30 p-2 sm:p-4 rounded-xl shadow-[0_0_15px_rgba(251,133,0,0.2)] transition-all">
+                            <div className="absolute -bottom-4 sm:-bottom-6 left-4 sm:left-8 bg-black/60 backdrop-blur-md border border-[#fb8500]/30 p-2 sm:p-4 rounded-xl shadow-lg transition-all">
                                <h4 className="text-[#fb8500] font-bold text-sm sm:text-lg whitespace-nowrap">Mastering</h4>
                                 <p className="font-saira text-[10px] sm:text-sm text-gray-300 whitespace-nowrap">Modern Tech</p>
                             </div>

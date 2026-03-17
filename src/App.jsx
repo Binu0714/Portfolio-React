@@ -3,7 +3,7 @@ import Home from './components/sections/Home'
 import About from './components/sections/About'
 import Skills from './components/sections/Skills';
 import NightSky from './components/NightSky'
-// import Projects from './components/sections/Projects'
+import Projects from './components/sections/Projects'
 // import Contact from './components/sections/Contact'
 import React, { useEffect } from 'react';
 import AOS from 'aos';
@@ -25,6 +25,7 @@ useEffect(() => {
         <Home />
         <About />
         <Skills />
+        <Projects />
       </main>
       
     </div>

@@ -29,3 +29,15 @@ html {
       transform: translateY(0);
   }
 }
+
+/* Ensure the Swiper container doesn't clip the hover effects */
+.mySwiper {
+    overflow: visible !important;
+}
+
+/* Make sure the slide container has enough room to breathe */
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

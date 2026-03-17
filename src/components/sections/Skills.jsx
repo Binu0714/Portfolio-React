@@ -7,14 +7,14 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1, // This controls the delay between each icon
-      delayChildren: 0.1,   // This adds a small delay before the first one starts
+      staggerChildren: 0.1,
+      delayChildren: 0.1,   
     },
   },
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 30 }, // Start lower (y:30)
+  hidden: { opacity: 0, y: 30 },
   visible: { 
     opacity: 1, 
     y: 0, 
@@ -55,7 +55,7 @@ const Skills = () => {
           {skills.map((skill, index) => (
              <motion.div
               key={index}
-              variants={itemVariants} // Using defined variants for smooth entrance
+              variants={itemVariants} 
               className="group relative flex flex-col items-center justify-center p-4 sm:p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(251,133,0,0.4)] transition-all"
             >
               <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-300 bg-[#fb8500]/10 blur-xl"></div>
