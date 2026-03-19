@@ -9,31 +9,42 @@ const Education = () => {
   ];
 
   return (
-    <section id="education" className="min-h-screen py-20 px-4 bg-transparent text-white scroll-mt-[80px]">
+    <section 
+      id="education" 
+      // Added overflow-x-hidden here to prevent horizontal scroll
+      className="min-h-screen py-20 px-4 bg-transparent text-white scroll-mt-[80px] overflow-x-hidden"
+    >
       <h2 className="text-4xl font-bold mb-16 text-center">
         Educational <span className="text-[#fb8500]">Background</span>
       </h2>
 
       <div className="relative max-w-4xl mx-auto">
-        {/* The Vertical Line */}
+        {/* The Vertical Line - Only visible on desktop */}
         <div className="absolute left-[50%] transform -translate-x-1/2 h-full w-1 bg-[#fb8500] hidden md:block"></div>
 
         {education.map((edu, index) => (
-          <div key={index} className={`mb-12 flex flex-col md:flex-row items-center w-full ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
+          <div 
+            key={index} 
+            className={`mb-12 flex flex-col md:flex-row items-center w-full relative ${
+              index % 2 === 0 ? 'md:flex-row-reverse' : ''
+            }`}
+          >
             
-            {/* The Logo Dot */}
+            {/* The Logo Dot - Only visible on desktop */}
             <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 z-20 
                 w-12 h-12 md:w-16 md:h-16 
-                bg-black rounded-full flex items-center justify-center">
-            <img src={edu.logo} alt="logo" className="w-full h-full object-contain rounded-full" />
+                bg-black rounded-full items-center justify-center border border-[#fb8500]">
+              <img src={edu.logo} alt="logo" className="w-full h-full object-contain rounded-full" />
             </div>
 
             {/* The Card */}
             <motion.div 
-              initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="md:w-5/12 bg-white/5 p-6 rounded-xl border border-white/10 transition-all hover:border-[#fb8500]/50 hover:shadow-[0_0_25px_rgba(251,133,0,0.3)]"
+              // reduced x offset for mobile (20) vs desktop (50) to keep it safe
+              initial={{ opacity: 0, x: typeof window !== 'undefined' && window.innerWidth < 768 ? 0 : (index % 2 === 0 ? 50 : -50), y: 20 }}
+              whileInView={{ opacity: 1, x: 0, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6 }}
+              className="w-full md:w-5/12 bg-white/5 p-6 rounded-xl border border-white/10 transition-all hover:border-[#fb8500]/50 hover:shadow-[0_0_25px_rgba(251,133,0,0.3)]"
             >
               <h3 className="text-xl font-bold text-white mb-1 text-center">{edu.school}</h3>
               <p className="text-[#fb8500] font-semibold mb-2 text-center">{edu.period}</p>
@@ -44,9 +55,10 @@ const Education = () => {
       </div>
 
       <motion.div 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.5, duration: 1 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3, duration: 1 }}
           className="mt-16 px-4 text-center"
         >
           <p className="text-gray-400 text-sm sm:text-base italic max-w-2xl mx-auto">
