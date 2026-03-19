@@ -30,14 +30,41 @@ html {
   }
 }
 
-/* Ensure the Swiper container doesn't clip the hover effects */
-.mySwiper {
-    overflow: visible !important;
+.swiper-pagination {
+    margin-top: 30px !important; 
+    bottom: 0px !important; 
 }
 
-/* Make sure the slide container has enough room to breathe */
+.swiper-pagination-bullet {
+    width: 14px !important; 
+    height: 14px !important;
+    background: #ffffff !important;
+    opacity: 0.5 !important;
+    transition: all 0.4s ease !important;
+    cursor: pointer;
+}
+
+.swiper-pagination-bullet:hover {
+    background: #fb8500 !important;
+    opacity: 0.8 !important;
+    transform: scale(1.3); 
+}
+
+.swiper-pagination-bullet-active {
+    background: #fb8500 !important;
+    width: 35px !important;
+    border-radius: 8px !important;
+    opacity: 1 !important;
+}
+
 .swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: auto !important;
+}
+
+.swiper-slide-active > div {
+    z-index: 10;
+}
+
+.group {
+    will-change: transform, box-shadow;
 }
