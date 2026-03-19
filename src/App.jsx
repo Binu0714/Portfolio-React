@@ -7,6 +7,7 @@ import Projects from './components/sections/Projects'
 import Education from './components/sections/Education'
 import Achievements from './components/sections/Achievements'
 import Contact from './components/sections/Contact'
+import Footer from './components/sections/Footer'
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -32,7 +33,7 @@ useEffect(() => {
         <Achievements />
         <Contact />
       </main>
-      
+      <Footer />
     </div>
   )
 }
