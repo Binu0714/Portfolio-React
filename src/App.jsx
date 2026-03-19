@@ -4,6 +4,7 @@ import About from './components/sections/About'
 import Skills from './components/sections/Skills';
 import NightSky from './components/NightSky'
 import Projects from './components/sections/Projects'
+import Education from './components/sections/Education'
 // import Contact from './components/sections/Contact'
 import React, { useEffect } from 'react';
 import AOS from 'aos';
@@ -26,6 +27,7 @@ useEffect(() => {
         <About />
         <Skills />
         <Projects />
+        <Education />
       </main>
       
     </div>
