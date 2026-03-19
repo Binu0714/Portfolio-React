@@ -59,15 +59,30 @@ const Projects = () => {
               <p className="text-sm mb-6 leading-relaxed text-center text-gray-300">{project.desc}</p>
               
               <div className="flex justify-center">
-                <a 
+                  <a 
                     href={project.link} 
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-black/20 hover:bg-[#fb8500] hover:text-black transition-all px-6 py-2 rounded-lg font-bold border border-[#fb8500]/30"
-                >
-                    Explore more on GitHub <FaGithub />
+                    
+                    className="group relative inline-flex items-center gap-3 px-6 py-2.5 rounded-full font-bold transition-all duration-300 
+                              hover:-translate-y-1 hover:shadow-lg border border-white/10 hover:border-[#fb8500] 
+                              bg-white text-black overflow-hidden"
+                    >
+                    
+                    <span className="absolute inset-0 bg-[#fb8500] transform -translate-x-full group-hover:translate-x-0 transition-transform duration-1000 ease-out z-0"></span>
+                    
+                    <span className="relative z-10 group-hover:text-white transition-colors duration-300">
+                      Explore more on GitHub
+                    </span>
+                    
+                    <img 
+                      src="/assets/skills/github.png" 
+                      alt="github" 
+                      className="relative z-10 w-6 h-6 object-contain group-hover:invert transition-all duration-300" 
+                    />
                 </a>
               </div>
+
             </motion.div>
           ))}
         </div>
