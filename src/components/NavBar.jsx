@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 
 const NavBar = () => {
+  const [activeLink, setActiveLink] = useState('#home');
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
@@ -13,7 +14,25 @@ const NavBar = () => {
     { name: 'Contact Me', href: '#contact' },
   ];
 
-  const [activeLink, setActiveLink] = useState('#home');
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = navLinks.map(link => document.querySelector(link.href));
+      
+      for (const section of sections) {
+        if (section) {
+          const rect = section.getBoundingClientRect();
+         
+          if (rect.top >= 0 && rect.top <= 300) {
+            setActiveLink(`#${section.id}`);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <header className="fixed top-0 left-0 right-0 px-[5%] lg:px-[10%] py-5 flex justify-between items-center z-[9999] bg-black">
@@ -25,11 +44,7 @@ const NavBar = () => {
         </strong>
       </a>
 
-      {/* 
-         MENU ICON LOGIC:
-         - lg:hidden: Hides the icon as soon as screen reaches 1024px (large breakpoint).
-         - w-[30px] (mobile) to w-[40px] (larger sizes)
-      */}
+     
       <img 
         src="/assets/menu/menu.png" 
         alt="Menu Icon" 
@@ -37,11 +52,7 @@ const NavBar = () => {
         className="lg:hidden w-[30px] h-[30px] cursor-pointe " 
       />
 
-      {/* 
-         NAVIGATION LINKS LOGIC:
-         - hidden lg:flex: Hides links on mobile, shows horizontal links on 1024px+.
-         - isOpen ? 'flex...' : 'hidden lg:flex': Handles the mobile drop-down menu.
-      */}
+      
       <nav 
         className={`
           ${isOpen 
