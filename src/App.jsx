@@ -6,7 +6,7 @@ import NightSky from './components/NightSky'
 import Projects from './components/sections/Projects'
 import Education from './components/sections/Education'
 import Achievements from './components/sections/Achievements'
-// import Contact from './components/sections/Contact'
+import Contact from './components/sections/Contact'
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -30,6 +30,7 @@ useEffect(() => {
         <Projects />
         <Education />
         <Achievements />
+        <Contact />
       </main>
       
     </div>
