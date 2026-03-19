@@ -1,8 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaEnvelope, FaPhone, FaPaperPlane } from 'react-icons/fa';
 
 const Contact = () => {
+    const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSendMessage = () => {
+    const phone = '94707431532';
+    const { name, email, message } = formData;
+    
+    const fullMessage = `Contact Form Message\n\n` +
+        `Name : ${name}\n` +
+        `Email : ${email}\n` +
+        `Message : ${message}`;
+
+    const encodedMessage = encodeURIComponent(fullMessage);
+    const url = `https://wa.me/${phone}?text=${encodedMessage}`;
+    
+    window.open(url, '_blank');
+  };
+
+
   return (
     <section id="contact" className="min-h-screen flex flex-col items-center justify-center py-20 px-4 bg-transparent text-white scroll-mt-[80px]">
       <h2 className="text-4xl font-bold mb-16 text-center">
@@ -59,36 +85,51 @@ const Contact = () => {
         </div>
 
         {/* Right Side: Form */}
-        <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+        <form className="space-y-5" onSubmit={(e) => { e.preventDefault(); handleSendMessage(); }}>
           <div className="mb-6">
             <h3 className="text-xl font-bold text-[#fb8500] mb-1">Send a Message</h3>
-            <p className="text-sm text-gray-400">Fill out the form below and I'll get back to you soon.</p>
           </div>
 
-          {[
-            { label: "Name", type: "text", placeholder: "Your Name" },
-            { label: "Email", type: "email", placeholder: "Your Email" },
-          ].map((field, i) => (
-            <div key={i} className="flex flex-col">
-              <label className="mb-2 text-sm font-semibold text-gray-300">{field.label} :</label>
-              <input 
-                type={field.type} 
-                placeholder={field.placeholder}
-                className="bg-[#1a1f26] border border-white/10 rounded-lg p-3 outline-none focus:border-[#fb8500] focus:ring-1 focus:ring-[#fb8500] transition-all hover:border-[#fb8500]/50" 
-              />
-            </div>
-          ))}
+          <div className="flex flex-col">
+            <label className="mb-2 text-sm font-semibold text-gray-300">Name :</label>
+            <input 
+                name="name"
+                type="text" 
+                value={formData.name}
+                onChange={handleChange}
+                required
+                className="bg-[#1a1f26] border border-white/10 rounded-lg p-3 outline-none focus:border-[#fb8500] transition-all" 
+            />
+          </div>
+
+          <div className="flex flex-col">
+            <label className="mb-2 text-sm font-semibold text-gray-300">Email :</label>
+            <input 
+                name="email"
+                type="email" 
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className="bg-[#1a1f26] border border-white/10 rounded-lg p-3 outline-none focus:border-[#fb8500] transition-all" 
+            />
+          </div>
 
           <div className="flex flex-col">
             <label className="mb-2 text-sm font-semibold text-gray-300">Message :</label>
             <textarea 
+              name="message"
               rows="4" 
-              placeholder="Your Message..."
-              className="bg-[#1a1f26] border border-white/10 rounded-lg p-3 outline-none focus:border-[#fb8500] focus:ring-1 focus:ring-[#fb8500] transition-all hover:border-[#fb8500]/50"
+              value={formData.message}
+              onChange={handleChange}
+              required
+              className="bg-[#1a1f26] border border-white/10 rounded-lg p-3 outline-none focus:border-[#fb8500] transition-all"
             ></textarea>
           </div>
 
-          <button className="w-full flex items-center justify-center gap-2 bg-[#fb8500] hover:bg-transparent hover:border-2 hover:border-[#fb8500] text-black hover:text-[#fb8500] font-bold py-3 rounded-lg transition-all transform hover:scale-[1.02] shadow-lg">
+          <button 
+            type="submit"
+            className="w-full flex items-center justify-center gap-2 bg-[#fb8500] text-black font-bold py-3 rounded-lg transition-all transform hover:scale-[1.02] shadow-lg"
+          >
             Send Message <FaPaperPlane />
           </button>
         </form>
