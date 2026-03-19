@@ -15,7 +15,7 @@ const Projects = () => {
         link: "https://github.com/Binu0714/AutoLog.git" 
     },
     { title: "Boardify", 
-        desc: "Boardify is a modern, secure, and user-friendly web platform designed to help university students in Sri Lanka easily find safe and suitable accommodation.", 
+        desc: "Boardify is a modern, secure, and user-friendly web platform designed to help university students in Sri Lanka to easily find safe and suitable accommodation.", 
         img: "/assets/my_projects/boardify.jpg", 
         link: "https://github.com/Binu0714/Boardify---AAD-Final-Project.git" 
     },
