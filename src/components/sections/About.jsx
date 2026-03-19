@@ -29,9 +29,14 @@ const About = () => {
                             <a href="#contact" className="inline-flex justify-center items-center w-[9.375rem] h-[2.75rem] no-underline text-white border-[2px] border-[#fb8500] rounded-[1.25rem] transition-all hover:scale-105 hover:shadow-[0_0_15px_#fb8500]">
                                 Contact Me
                             </a>
-                            <a href="" className="inline-flex justify-center items-center w-[9.375rem] h-[2.75rem] no-underline text-white border-[2px] border-[#fb8500] rounded-[1.25rem] transition-all hover:scale-105 hover:shadow-[0_0_15px_#fb8500]">
+
+                            <a 
+                            href="docs/Binu Jinajith_CV.pdf" 
+                            download="Binu Jinajith_CV.pdf"
+                            className="inline-flex justify-center items-center w-[9.375rem] h-[2.75rem] no-underline text-white border-[2px] border-[#fb8500] rounded-[1.25rem] transition-all hover:scale-105 hover:shadow-[0_0_15px_#fb8500]">
                                 Download CV 
                             </a>
+
                         </div>
                     </div>
 

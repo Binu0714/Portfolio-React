@@ -13,10 +13,7 @@ const Home = () => {
       id="home" 
       className="relative min-h-screen flex justify-center items-center px-6 py-20 scroll-mt-[80px] animate-fade" 
     >
-      {/* 
-        Container max-w-4xl is good, but we allow it to grow on 2560px 
-        mx-auto ensures it stays centered on all screens 
-      */}
+     
       <div className="w-full max-w-4xl flex flex-col items-center">
         
         {/* Responsive Text Scaling: 48px on mobile -> 80px on desktop */}
@@ -54,7 +51,8 @@ const Home = () => {
         {/* Responsive Buttons: Uses flex-wrap so they stack vertically on tiny 320px screens */}
         <div className="flex flex-wrap justify-center gap-4 mt-10">
           <a 
-            href="#" 
+            href="docs/Binu Jinajith_CV.pdf" 
+            download="Binu Jinajith_CV.pdf"
             className="inline-flex justify-center items-center w-[150px] md:w-[160px] h-[45px] no-underline text-white border-[2px] border-[#fb8500] rounded-[20px] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_15px_#fb8500]"
           >
             Download CV
