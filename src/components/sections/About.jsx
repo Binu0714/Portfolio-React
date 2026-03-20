@@ -43,8 +43,8 @@ const About = () => {
                     {/* RIGHT SIDE: IMAGE CONTAINER */}
                     {/* This will now naturally sit BELOW the text on mobile/tablet because of the grid order */}
                     <div className="relative flex justify-center items-center mt-10 lg:mt-0 w-full">
-                        <div className="relative w-[280px] h-[350px] md:w-[350px] md:h-[450px]">
-                            <div className="absolute -left-6 top-6 w-full h-full bg-[#fb8500]/30 rounded-2xl blur-xl -z-10"></div>
+                        <div className="relative w-[280px] h-[350px] md:w-[350px] md:h-[450px] ">
+                            <div className="absolute -left-6 top-6 w-full h-full bg-[#fb8500]/30 rounded-2xl blur-xl -z-10 "></div>
                             <img 
                                 src="/assets/about/me2.png" 
                                 alt="Binu Jinajith" 
@@ -52,17 +52,17 @@ const About = () => {
                             />
 
                             {/* Floating Cards - Hidden on mobile, appear on Tablet/Desktop (1024px+) */}
-                            <div className="absolute -left-2 sm:-left-10 top-6 sm:top-10 bg-black/60 backdrop-blur-md border border-[#fb8500]/30 p-2 sm:p-4 rounded-xl shadow-lg transition-all">
+                            <div className="absolute -left-2 sm:-left-10 top-6 sm:top-10 bg-black/60 backdrop-blur-md border border-[#fb8500]/30 p-2 sm:p-4 rounded-xl shadow-lg transition-all hover:scale-105">
                                 <h4 className="text-[#fb8500] font-bold text-sm sm:text-lg whitespace-nowrap">Solving</h4>
                                 <p className="font-saira text-[10px] sm:text-sm text-gray-300 whitespace-nowrap">Real World Problems</p>
                             </div>
 
-                            <div className="absolute -right-2 sm:-right-8 bottom-16 sm:bottom-20 bg-black/60 backdrop-blur-md border border-[#fb8500]/30 p-2 sm:p-4 rounded-xl shadow-lg transition-all">
+                            <div className="absolute -right-2 sm:-right-8 bottom-16 sm:bottom-20 bg-black/60 backdrop-blur-md border border-[#fb8500]/30 p-2 sm:p-4 rounded-xl shadow-lg transition-all hover:scale-105">
                                 <h4 className="text-[#fb8500] font-bold text-sm sm:text-lg whitespace-nowrap">Crafting</h4>
                                 <p className="font-saira text-[10px] sm:text-sm text-gray-300 whitespace-nowrap">Clean Codes</p>
                             </div>
 
-                            <div className="absolute -bottom-4 sm:-bottom-6 left-4 sm:left-8 bg-black/60 backdrop-blur-md border border-[#fb8500]/30 p-2 sm:p-4 rounded-xl shadow-lg transition-all">
+                            <div className="absolute -bottom-4 sm:-bottom-6 left-4 sm:left-8 bg-black/60 backdrop-blur-md border border-[#fb8500]/30 p-2 sm:p-4 rounded-xl shadow-lg transition-all hover:scale-105">
                                <h4 className="text-[#fb8500] font-bold text-sm sm:text-lg whitespace-nowrap">Mastering</h4>
                                 <p className="font-saira text-[10px] sm:text-sm text-gray-300 whitespace-nowrap">Modern Tech</p>
                             </div>

@@ -33,7 +33,7 @@ const Education = () => {
             {/* The Logo Dot - Only visible on desktop */}
             <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 z-20 
                 w-12 h-12 md:w-16 md:h-16 
-                bg-black rounded-full items-center justify-center border border-[#fb8500]">
+                bg-black rounded-full items-center justify-center border border-[#fb8500] ">
               <img src={edu.logo} alt="logo" className="w-full h-full object-contain rounded-full" />
             </div>
 
@@ -44,7 +44,7 @@ const Education = () => {
               whileInView={{ opacity: 1, x: 0, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6 }}
-              className="w-full md:w-5/12 bg-white/5 p-6 rounded-xl border border-white/10 transition-all hover:border-[#fb8500]/50 hover:shadow-[0_0_25px_rgba(251,133,0,0.3)]"
+              className="w-full md:w-5/12 bg-white/5 p-6 rounded-xl border border-white/10 transition-all hover:border-[#fb8500]/50 hover:shadow-[0_0_25px_rgba(251,133,0,0.3)] hover:scale-105"
             >
               <h3 className="text-xl font-bold text-white mb-1 text-center">{edu.school}</h3>
               <p className="text-[#fb8500] font-semibold mb-2 text-center">{edu.period}</p>

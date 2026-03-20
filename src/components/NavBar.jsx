@@ -73,7 +73,7 @@ const NavBar = () => {
               no-underline relative transition-colors duration-300
               
               /* Font size: 14px on small screens, 16px on screens 1024px+ */
-              text-[14px] lg:text-[16px] font-bold
+              text-[14px] lg:text-[16px] font-bold 
               
               /* Responsive Spacing */
               ${isOpen ? 'ml-0' : 'lg:ml-[3.125rem]'}

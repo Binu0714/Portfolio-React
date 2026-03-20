@@ -52,7 +52,7 @@ const Achievements = () => {
               </AnimatePresence>
 
               {/* Decorative Floating Label */}
-              <div className="absolute -bottom-6 -right-6 bg-[#fb8500] text-black font-bold px-4 py-2 md:px-6 rounded-full shadow-lg text-sm md:text-base whitespace-nowrap">
+              <div className="absolute -bottom-6 -right-6 bg-[#fb8500] text-black font-bold px-4 py-2 md:px-6 rounded-full shadow-lg text-sm md:text-base whitespace-nowrap hover:scale-105 hover:border-[#fb8500]/50 hover:shadow-[0_0_25px_rgba(251,133,0,0.3)]">
                 {images[current].label}
               </div>
             </div>

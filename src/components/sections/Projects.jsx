@@ -71,7 +71,7 @@ const Projects = () => {
                   <img src={project.img} alt={project.title} className="w-full h-48 object-cover rounded-xl mb-6" />
                   
                   <h3 className="text-2xl font-bold text-[#fb8500] mb-3 text-center">{project.title}</h3>
-                  <p className="text-sm mb-6 leading-relaxed text-center text-gray-300">{project.desc}</p>
+                  <p className="font-saira text-sm mb-6 leading-relaxed text-center text-gray-300">{project.desc}</p>
                   
                   <div className="flex justify-center">
                   <a 

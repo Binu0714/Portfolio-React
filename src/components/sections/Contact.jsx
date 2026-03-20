@@ -30,7 +30,7 @@ const Contact = () => {
 
 
   return (
-    <section id="contact" className="min-h-screen flex flex-col items-center justify-center py-20 px-4 bg-transparent text-white scroll-mt-[80px]">
+    <section id="contact" className="min-h-screen flex flex-col items-center justify-center py-20 px-4 bg-transparent text-white scroll-mt-[80px] ">
       <h2 className="text-4xl font-bold mb-16 text-center">
         Contact <span className="text-[#fb8500]">Me</span>
       </h2>
@@ -39,24 +39,24 @@ const Contact = () => {
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="max-w-5xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl p-8 md:p-12 shadow-2xl"
+        className="max-w-5xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 bg-white/5 border border-white/10 backdrop-blur-md rounded-3xl p-8 md:p-12 shadow-2xl  hover:border-[#fb8500]/50"
       >
         {/* Left Side: Info */}
                 
         <div className="flex-1 space-y-8">
         <div>
             <h3 className="text-2xl font-bold mb-4">Let's Work Together</h3>
-            <p className="text-gray-300">
+            <p className="font-saira text-gray-300">
             I'd love to hear from you! Whether you have a question, collaboration idea, or just want to connect, feel free to reach out. Let's start a conversation!
             </p>
         </div>
 
         <div className="space-y-4">
-            <div className="flex items-center justify-center gap-4 p-6 rounded-xl border border-white/10 bg-white/5 hover:border-[#fb8500] transition-all">
+            <div className="flex items-center justify-center gap-4 p-6 rounded-xl border border-white/10 bg-white/5 hover:border-[#fb8500] transition-all hover:scale-105">
                 <FaEnvelope className="text-[#fb8500] text-xl" />
                 <span className='text-lg'>binuj714@gmail.com</span>
             </div>
-            <div className="flex items-center justify-center gap-4 p-6 rounded-xl border border-white/10 bg-white/5 hover:border-[#fb8500] transition-all">
+            <div className="flex items-center justify-center gap-4 p-6 rounded-xl border border-white/10 bg-white/5 hover:border-[#fb8500] transition-all hover:scale-105">
                 <FaPhone className="text-[#fb8500] text-xl" />
                 <span className='text-lg'>+94 707431532</span>
             </div>

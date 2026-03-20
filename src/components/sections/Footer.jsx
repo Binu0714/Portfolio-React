@@ -3,7 +3,7 @@ import { FaHeart } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="py-10 px-4 bg-transparent border-t border-white/5 text-center">
+    <footer className="py-10 px-4 bg-transparent text-center  bg-white/5">
       <div className="max-w-6xl mx-auto flex flex-col items-center gap-4">
         
         {/* Branding */}
