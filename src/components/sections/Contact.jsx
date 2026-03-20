@@ -30,7 +30,16 @@ const Contact = () => {
 
 
   return (
-    <section id="contact" className="min-h-screen flex flex-col items-center justify-center py-20 px-4 bg-transparent text-white scroll-mt-[80px] ">
+    <motion.section 
+      id="contact" 
+      initial={{ opacity: 0, y: 50 }} 
+      whileInView={{ opacity: 1, y: 0 }} 
+      exit={{ opacity: 0, y: 50 }} 
+      viewport={{ once: false, amount: 0.2 }}
+      transition={{ duration: 0.8, ease: "easeOut" }} 
+      className="min-h-screen flex flex-col items-center justify-center py-20 px-4 bg-transparent text-white scroll-mt-[80px] "
+    >
+
       <h2 className="text-4xl font-bold mb-16 text-center">
         Contact <span className="text-[#fb8500]">Me</span>
       </h2>
@@ -134,7 +143,7 @@ const Contact = () => {
           </button>
         </form>
       </motion.div>
-    </section>
+    </motion.section>
   );
 };
 

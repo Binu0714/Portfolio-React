@@ -20,8 +20,13 @@ const Achievements = () => {
   }, [images.length]);
 
   return (
-    <section
-      id="achievements"
+    <motion.section
+      id="achievements" 
+      initial={{ opacity: 0, y: 50 }} 
+      whileInView={{ opacity: 1, y: 0 }} 
+      exit={{ opacity: 0, y: 50 }} 
+      viewport={{ once: false, amount: 0.2 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
       className="min-h-screen flex items-center justify-center py-20 px-4 bg-transparent text-white scroll-mt-[80px] overflow-x-hidden"
     >
       <div className="max-w-6xl w-full mx-auto">
@@ -89,7 +94,7 @@ const Achievements = () => {
 
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

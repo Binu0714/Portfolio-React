@@ -1,6 +1,17 @@
+import { motion } from "framer-motion";
+
 const About = () => {
     return (
-        <section id="about" className="min-h-screen flex items-center justify-center py-10 px-4 relative overflow-hidden scroll-mt-[80px]" data-aos="fade-up">
+        <motion.section 
+            id="about" 
+            initial={{ opacity: 0, y: 50 }} 
+            whileInView={{ opacity: 1, y: 0 }} 
+            exit={{ opacity: 0, y: 50 }} 
+            viewport={{ once: false, amount: 0.2 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="min-h-screen flex items-center justify-center py-10 px-4 relative overflow-hidden scroll-mt-[80px]"
+        >
+
             <div className="container mx-auto max-w-5xl">
                 <h2 className="text-4xl font-bold mb-12 text-center">
                     About <span className="text-[#fb8500]">Me</span>
@@ -52,25 +63,41 @@ const About = () => {
                             />
 
                             {/* Floating Cards - Hidden on mobile, appear on Tablet/Desktop (1024px+) */}
-                            <div className="absolute -left-2 sm:-left-10 top-6 sm:top-10 bg-black/60 backdrop-blur-md border border-[#fb8500]/30 p-2 sm:p-4 rounded-xl shadow-lg transition-all hover:scale-105">
+                            <motion.div 
+                                initial={{ opacity: 0, x: -50 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.8, delay: 0.2 }}
+                                className="absolute -left-2 sm:-left-10 top-6 sm:top-10 bg-black/60 backdrop-blur-md border border-[#fb8500]/30 p-2 sm:p-4 rounded-xl shadow-lg transition-all hover:scale-105"
+                            >
+
                                 <h4 className="text-[#fb8500] font-bold text-sm sm:text-lg whitespace-nowrap">Solving</h4>
                                 <p className="font-saira text-[10px] sm:text-sm text-gray-300 whitespace-nowrap">Real World Problems</p>
-                            </div>
+                            </motion.div>
 
-                            <div className="absolute -right-2 sm:-right-8 bottom-16 sm:bottom-20 bg-black/60 backdrop-blur-md border border-[#fb8500]/30 p-2 sm:p-4 rounded-xl shadow-lg transition-all hover:scale-105">
+                            <motion.div 
+                                initial={{ opacity: 0, x: 50 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.8, delay: 0.2 }}
+                                className="absolute -right-2 sm:-right-8 bottom-16 sm:bottom-20 bg-black/60 backdrop-blur-md border border-[#fb8500]/30 p-2 sm:p-4 rounded-xl shadow-lg transition-all hover:scale-105"
+                            >
                                 <h4 className="text-[#fb8500] font-bold text-sm sm:text-lg whitespace-nowrap">Crafting</h4>
                                 <p className="font-saira text-[10px] sm:text-sm text-gray-300 whitespace-nowrap">Clean Codes</p>
-                            </div>
+                            </motion.div>
 
-                            <div className="absolute -bottom-4 sm:-bottom-6 left-4 sm:left-8 bg-black/60 backdrop-blur-md border border-[#fb8500]/30 p-2 sm:p-4 rounded-xl shadow-lg transition-all hover:scale-105">
-                               <h4 className="text-[#fb8500] font-bold text-sm sm:text-lg whitespace-nowrap">Mastering</h4>
+                            <motion.div 
+                                initial={{ opacity: 0, y: 50 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8, delay: 0.2 }}
+                                className="absolute -bottom-4 sm:-bottom-6 left-4 sm:left-8 bg-black/60 backdrop-blur-md border border-[#fb8500]/30 p-2 sm:p-4 rounded-xl shadow-lg transition-all hover:scale-105"
+                            >
+                                <h4 className="text-[#fb8500] font-bold text-sm sm:text-lg whitespace-nowrap">Mastering</h4>
                                 <p className="font-saira text-[10px] sm:text-sm text-gray-300 whitespace-nowrap">Modern Tech</p>
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </motion.section>
     );
 }
 

@@ -37,7 +37,7 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="min-h-screen flex items-center justify-center px-4 bg-transparent text-white relative overflow-hidden scroll-mt-[80px]">
+    <section id="skills" data-aos="fade-up" className="min-h-screen flex items-center justify-center px-4 bg-transparent text-white relative overflow-hidden scroll-mt-[80px]">
       <motion.div 
             variants={containerVariants}
             initial="hidden"

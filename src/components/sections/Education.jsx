@@ -9,9 +9,13 @@ const Education = () => {
   ];
 
   return (
-    <section 
+    <motion.section 
       id="education" 
-      // Added overflow-x-hidden here to prevent horizontal scroll
+      initial={{ opacity: 0, y: 50 }} 
+      whileInView={{ opacity: 1, y: 0 }} 
+      exit={{ opacity: 0, y: 50 }} 
+      viewport={{ once: false, amount: 0.2 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
       className="min-h-screen py-20 px-4 bg-transparent text-white scroll-mt-[80px] overflow-x-hidden"
     >
       <h2 className="text-4xl font-bold mb-16 text-center">
@@ -42,8 +46,8 @@ const Education = () => {
               // reduced x offset for mobile (20) vs desktop (50) to keep it safe
               initial={{ opacity: 0, x: typeof window !== 'undefined' && window.innerWidth < 768 ? 0 : (index % 2 === 0 ? 50 : -50), y: 20 }}
               whileInView={{ opacity: 1, x: 0, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6 }}
+              viewport={{ once: false, margin: "-50px" }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
               className="w-full md:w-5/12 bg-white/5 p-6 rounded-xl border border-white/10 transition-all hover:border-[#fb8500]/50 hover:shadow-[0_0_25px_rgba(251,133,0,0.3)] hover:scale-105"
             >
               <h3 className="text-xl font-bold text-white mb-1 text-center">{edu.school}</h3>
@@ -66,7 +70,7 @@ const Education = () => {
           </p>
           <p className="text-[#fb8500] text-sm mt-2 italic">- Nelson Mandela</p>
       </motion.div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -38,8 +38,17 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="min-h-screen flex flex-col items-center justify-center py-20 px-4 bg-transparent text-white scroll-mt-[80px]">
-      <h2 className="text-4xl font-bold mb-16 text-center">
+    <motion.section 
+      id="projects" 
+      initial={{ opacity: 0, y: 50 }} 
+      whileInView={{ opacity: 1, y: 0 }} 
+      exit={{ opacity: 0, y: 50 }} 
+      viewport={{ once: false, amount: 0.2 }}
+      transition={{ duration: 0.8, ease: "easeOut" }} 
+      className="min-h-screen flex flex-col items-center justify-center py-20 px-4 bg-transparent text-white scroll-mt-[80px]"
+    >
+
+      <h2 className="text-4xl font-bold mb-8 text-center">
         My <span className="text-[#fb8500]">Projects</span>
       </h2>
 
@@ -50,6 +59,9 @@ const Projects = () => {
           slidesPerView={1}
           centeredSlides={true}
           loop={true}
+
+          autoplay={{ delay: 4000, disableOnInteraction: false }}
+
           pagination={{ clickable: true, type: 'bullets' }}
           breakpoints={{
             768: { slidesPerView: 2 },
@@ -103,7 +115,7 @@ const Projects = () => {
           ))}
         </Swiper>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
