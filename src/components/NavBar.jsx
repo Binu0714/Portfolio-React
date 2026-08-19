@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const NavBar = () => {
   const [activeLink, setActiveLink] = useState('#home');
@@ -35,28 +35,25 @@ const NavBar = () => {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 px-[5%] lg:px-[10%] py-5 flex justify-between items-center z-[9999] bg-black">
+    <header className="fixed top-0 left-0 right-0 px-[5%] lg:px-[10%] py-4 flex justify-between items-center z-[9999] bg-black">
       
-      {/* LOGO */}
-      <a href="#home" className="text-[1.375rem] text-white no-underline font-medium">
+      <a href="#home" className="text-[1.2rem] text-white no-underline font-medium">
         <strong>
           <span className="text-[#fb8500]">B</span>inu <span className="text-[#fb8500]">J</span>inajith
         </strong>
       </a>
 
-     
       <img 
         src="/assets/menu/menu.png" 
         alt="Menu Icon" 
         onClick={() => setIsOpen(!isOpen)}
-        className="lg:hidden w-[30px] h-[30px] cursor-pointe " 
+        className="lg:hidden w-[26px] h-[26px] cursor-pointer" 
       />
 
-      
       <nav 
         className={`
           ${isOpen 
-            ? 'flex flex-col absolute top-full left-0 w-full bg-black py-8 items-center gap-6 shadow-xl' 
+            ? 'flex flex-col absolute top-full left-0 w-full bg-black py-6 items-center gap-5 shadow-xl' 
             : 'hidden lg:flex lg:items-center'
           }
         `}
@@ -65,20 +62,23 @@ const NavBar = () => {
           <a
             key={link.name}
             href={link.href}
-            onClick={() => {
+            onClick={(e) => {
+              if (activeLink === link.href) {
+                e.preventDefault();
+                setIsOpen(false);
+                return;
+              }
               setActiveLink(link.href);
               setIsOpen(false);
             }}
             className={`
               no-underline relative transition-colors duration-300
               
-              /* Font size: 14px on small screens, 16px on screens 1024px+ */
-              text-[14px] lg:text-[16px] font-bold 
+              text-[13px] lg:text-[14.5px] font-bold 
               
-              /* Responsive Spacing */
-              ${isOpen ? 'ml-0' : 'lg:ml-[3.125rem]'}
+              ${isOpen ? 'ml-0' : 'lg:ml-[2.5rem]'}
               
-              after:content-[''] after:absolute after:left-0 after:-bottom-[5px] after:h-[2px] after:bg-[#fb8500] after:transition-all after:duration-300
+              after:content-[''] after:absolute after:left-0 after:-bottom-[4px] after:h-[2px] after:bg-[#fb8500] after:transition-all after:duration-300
               
               ${activeLink === link.href 
                 ? 'text-[#fb8500] after:w-full' 

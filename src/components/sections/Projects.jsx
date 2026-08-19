@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Autoplay, Mousewheel } from 'swiper/modules';
+import { Pagination, Autoplay } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -50,17 +50,17 @@ const Projects = () => {
       exit={{ opacity: 0, y: 50 }} 
       viewport={{ once: false, amount: 0.2 }}
       transition={{ duration: 0.8, ease: "easeOut" }} 
-      className="min-h-screen flex flex-col items-center justify-center py-20 px-4 bg-transparent text-white scroll-mt-[80px]"
+      className="min-h-screen flex flex-col items-center justify-center py-14 px-4 bg-transparent text-white scroll-mt-[80px]"
     >
 
-      <h2 className="text-4xl font-bold mb-8 text-center">
+      <h2 className="text-3xl font-bold mb-6 text-center">
         My <span className="text-[#fb8500]">Projects</span>
       </h2>
 
-      <div className="w-full max-w-7xl px-4">
+      <div className="w-full max-w-6xl px-4">
         <Swiper
           modules={[Pagination, Autoplay]}
-          spaceBetween={30}
+          spaceBetween={24}
           slidesPerView={1}
           centeredSlides={true}
           loop={true}
@@ -72,31 +72,31 @@ const Projects = () => {
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
           }}
-          className="pb-24"
+          className="pb-16"
         >
           {projects.map((project, index) => (
-            <SwiperSlide key={index} className="py-10">
+            <SwiperSlide key={index} className="py-6">
               {({ isActive }) => (
                 <motion.div 
                   initial={{ opacity: 0.5 }}
                   animate={{ 
                     opacity: isActive ? 1 : 0.6,
-                    scale: isActive ? 1.05 : 0.9,
+                    scale: isActive ? 1.02 : 0.88,
                     y: isActive ? 0 : 20
                   }}
-                  className="mx-2 my-8 group relative rounded-2xl p-6 bg-white/5 border border-white/10 backdrop-blur-md transition-all duration-300 hover:border-[#fb8500]/50 hover:shadow-[0_0_25px_rgba(251,133,0,0.3)]"                >
-                  <img src={project.img} alt={project.title} className="w-full h-48 object-cover rounded-xl mb-6" />
+                  className="mx-2 my-6 group relative rounded-xl p-5 bg-white/5 border border-white/10 backdrop-blur-md transition-all duration-300 hover:border-[#fb8500]/50 hover:shadow-[0_0_25px_rgba(251,133,0,0.3)]"                >
                   
-                  <h3 className="text-2xl font-bold text-[#fb8500] mb-3 text-center">{project.title}</h3>
-                  <p className="font-saira text-sm mb-6 leading-relaxed text-center text-gray-300">{project.desc}</p>
+                  <img src={project.img} alt={project.title} className="w-full h-48 object-cover rounded-lg mb-6" />
+                  
+                  <h3 className="text-xl font-bold text-[#fb8500] mb-2 text-center">{project.title}</h3>
+                  <p className="font-saira text-xs mb-4 leading-relaxed text-center text-gray-300">{project.desc}</p>
                   
                   <div className="flex justify-center">
                   <a 
                     href={project.link} 
                     target="_blank"
                     rel="noopener noreferrer"
-                    
-                    className="group relative inline-flex items-center gap-3 px-6 py-2.5 rounded-full font-bold transition-all duration-300 
+                    className="group relative inline-flex items-center gap-3 px-5 py-2 rounded-full font-bold text-sm transition-all duration-300 
                               hover:-translate-y-1 hover:shadow-lg border hover:border-[#fb8500] 
                               bg-white text-black overflow-hidden"
                     >
@@ -110,7 +110,7 @@ const Projects = () => {
                     <img 
                       src="/assets/skills/github.png" 
                       alt="github" 
-                      className="relative z-10 w-6 h-6 object-contain group-hover:invert transition-all duration-300" 
+                      className="relative z-10 w-5 h-5 object-contain group-hover:invert transition-all duration-300" 
                     />
                   </a>
                 </div>
