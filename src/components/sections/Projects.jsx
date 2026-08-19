@@ -34,6 +34,11 @@ const Projects = () => {
         img: "/assets/my_projects/tictactoe.png", 
         link: "https://github.com/Binu0714/Tik-Tac-Toe.git" 
     },
+    { title: "BMS - ERP System", 
+        desc: "I engineered an end-to-end Enterprise Resource Planning (ERP) platform to eliminate manual bookkeeping and inventory spoilage in a food distribution supply chain. By implementing a decoupled architecture, I decoupled the frontend and backend to ensure scalability and security.", 
+        img: "/assets/my_projects/bms.jpeg", 
+        link: "https://github.com/Binu0714/Business_Management_System_Backend.git" 
+    },
 
   ];
 

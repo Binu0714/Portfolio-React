@@ -3,9 +3,9 @@ import React from 'react';
 const Home = () => {
   const socialLinks = [
     { id: 1, href: "https://www.linkedin.com/in/binu-jinajith-3424aa347/", src: "/assets/hero/linkedIn.png", alt: "LinkedIn" },
-    { id: 2, href: "https://www.instagram.com/binu_j18?igsh=Mnd0OHpha2s5czh3", src: "/assets/hero/instergram.png", alt: "Instagram" },
+    { id: 2, href: "https://www.instagram.com/binu_j18", src: "/assets/hero/instergram.png", alt: "Instagram" },
     { id: 3, href: "https://github.com/Binu0714", src: "/assets/hero/github.png", alt: "GitHub" },
-    { id: 4, href: "https://www.facebook.com/share/1ANgAxJBRG/", src: "/assets/hero/facebook.png", alt: "Facebook" },
+    { id: 4, href: "https://web.facebook.com/binu.jinajith.2025", src: "/assets/hero/facebook.png", alt: "Facebook" },
   ];
 
   return (

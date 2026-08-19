@@ -76,11 +76,11 @@ const Contact = () => {
             <h4 className="text-lg font-semibold mb-4 text-[#fb8500]">Connect with me on Social Media</h4>
             <div className="flex gap-4">
             {[
-                { src: "/assets/hero/linkedIn.png", href: "#" },
-                { src: "/assets/hero/instergram.png", href: "#" },
-                { src: "/assets/hero/x.png", href: "#" },
-                { src: "/assets/hero/facebook.png", href: "#" },
-                { src: "/assets/hero/threads.png", href: "#" }
+                { src: "/assets/hero/linkedIn.png", href: "https://www.linkedin.com/in/binu-jinajith-3424aa347/" },
+                { src: "/assets/hero/instergram.png", href: "https://www.instagram.com/binu_j18" },
+                { src: "/assets/hero/x.png", href: "https://x.com/Binu80992" },
+                { src: "/assets/hero/facebook.png", href: "https://web.facebook.com/binu.jinajith.2025" },
+                { src: "/assets/hero/threads.png", href: "https://www.threads.com/@binu_j18" }
             ].map((social, i) => (
                 <a 
                 key={i} 

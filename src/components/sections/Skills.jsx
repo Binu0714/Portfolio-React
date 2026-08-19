@@ -1,6 +1,29 @@
 import { motion } from "framer-motion";
-import { FaReact, FaNodeJs, FaGitAlt, FaMobileAlt } from "react-icons/fa";
-import { SiTailwindcss, SiMongodb, SiFirebase, SiJavascript, SiExpress, SiSpringboot } from "react-icons/si";
+import {
+  FaReact,
+  FaNodeJs,
+  FaGitAlt,
+  FaMobileAlt,
+  FaJava,
+  FaPython,
+  FaDocker,
+  FaHtml5,
+  FaCss3Alt,
+} from "react-icons/fa";
+
+import {
+  SiTailwindcss,
+  SiMongodb,
+  SiFirebase,
+  SiJavascript,
+  SiExpress,
+  SiSpringboot,
+  SiFlutter,
+  SiTypescript,
+  SiPostgresql,
+  SiGithub,
+  SiFigma,
+} from "react-icons/si";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -8,30 +31,35 @@ const containerVariants = {
     opacity: 1,
     transition: {
       staggerChildren: 0.1,
-      delayChildren: 0.1,   
+      delayChildren: 0.1,
     },
   },
 };
 
 const itemVariants = {
   hidden: { opacity: 0, y: 30 },
-  visible: { 
-    opacity: 1, 
-    y: 0, 
-    transition: { duration: 0.6, ease: "easeOut" } 
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
   },
 };
 
 const skills = [
+  { name: "Java", icon: <FaJava /> },
   { name: "React.js", icon: <FaReact /> },
   { name: "JavaScript", icon: <SiJavascript /> },
+  { name: "TypeScript", icon: <SiTypescript /> },
   { name: "Tailwind CSS", icon: <SiTailwindcss /> },
   { name: "Node.js", icon: <FaNodeJs /> },
   { name: "Express.js", icon: <SiExpress /> },
   { name: "MongoDB", icon: <SiMongodb /> },
   { name: "Firebase", icon: <SiFirebase /> },
   { name: "React Native", icon: <FaMobileAlt /> },
+  { name: "Flutter", icon: <SiFlutter /> },
   { name: "Spring Boot", icon: <SiSpringboot /> },
+  { name: "Python", icon: <FaPython /> },
+  { name: "Docker", icon: <FaDocker /> },
   { name: "Git", icon: <FaGitAlt /> },
 ];
 
